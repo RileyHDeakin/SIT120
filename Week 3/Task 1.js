@@ -1,0 +1,10 @@
+console.log("Hello world!"); 
+var txt = "yeah the bois";
+console.log(txt);
+var txt2 = txt.toUpperCase();
+console.log(txt2);
+var txt_length = txt.length;
+console.log(txt_length);
+var txt = "Hello";
+var result = txt.slice(3);
+console.log(result);
