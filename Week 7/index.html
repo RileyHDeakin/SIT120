@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    </head>
+    <body>
+        <p id="message"></p>
+	</div>
+    </div>
+	<br>
+    <div id="app">
+        <compontant1 :person="person"></compontant1>
+        <compontant1 v-for="fruit in fruits" :fruit="fruit"></compontant1>  
+    </div>
+    <!--creating the global componant-->
+    <script>
+     
+        var compontant1 = {
+            template: '<h2>{{ fruit }}</h2>',
+            props: ['person', 'fruit'],
+        };
+        var app = new Vue({
+            el: '#app',
+
+            data: {
+                person: {
+                    firstName: 'John',
+                    lastname: 'Doe'
+                },
+                fruits: ['apple', 'banana', 'orange'],
+            },
+            components: {
+                compontant1,
+            },
+        });
+    </script>
+    </body>
+</html>

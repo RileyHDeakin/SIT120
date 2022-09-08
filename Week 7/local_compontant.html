@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    </head>
+    <body>
+        <p id="message"></p>
+	</div>
+    </div>
+	<br>
+	<script src="https://unpkg.com/vue@3"></script>
+    
+    <div id="content">      
+    </div>
+        <div id="local_componant"></div>
+        <!--creating the local componant-->
+        <script>
+        const app = Vue.createApp({
+            components: () => ({
+                ComponentA
+            }),
+            template:
+                '<h1>local componant</h1>'
+            });
+        app.mount("#local_componant");
+        </script>
+    </body>
+</html>
