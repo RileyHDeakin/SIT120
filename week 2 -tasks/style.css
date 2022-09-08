@@ -1,0 +1,27 @@
+
+@media  and (min-width: 400px) {
+    body {
+        background-color: lightpink;
+    }
+    
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        background-color: lightskyblue;
+    }
+}
+
+
+@media (min-width: 575px) {
+    p {
+        width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
