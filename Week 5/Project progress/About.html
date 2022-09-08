@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+        <title>ROTMG - Collection tracker</title>
+        <!--linking a stylesheet for larger screen as well as one for smaller screens-->
+        <link rel="stylesheet" href="style.css">
+		<script src="javascript.js"></script>
+    </head>
+</html>
+<body>
+    
+    <nav class="navigationWrap">
+      <!--setting a logo for the website, responsive class will cause logo
+          to not be bigger than the navigation bar -->  
+        <logo class="logo_responsive">
+            <img class="responsive" src="./logo-test1.jpg" />
+        </logo>
+        <!--start of the links. The navigation class uses flex to display the items in a row-->
+    <ul class="navigation">
+        <li class="parent"><a class="link" href="./index.html">Home</a></li>
+        <!--new div for the dropdown link-->
+        <div class="dropdown">
+           <li class="parent"><a class="link" href="#">Collections</a></li> 
+            <div class="dropdown-content">
+                <a class="link" href="#">Weapons</a>
+                <a class="link" href="#">Armor</a>
+                <a class="link" href="#">Rings</a>
+                <a class="link" href="#">Abilities</a>
+            </div>
+        </div>
+        <li class="parent"><a class="link" href="#">Contact</a></li>
+        <li class="parent"><a class="link" href="#">About</a></li>
+    </ul>
+    </nav>
+    <br>
+    <!--Embeded Youtube video-->
+    <div class="center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/4-CAFrv9H5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br><br>
+    <!--Video tag source="https://www.videezy.com/technology/5654-4k-stock-video-of-typing-on-laptop"-->
+    <div class="center">
+    <video width="auto" height="300" controls>
+        <source src="typing-vid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video> 
+      </div>
+      <br><br>
+      <!--Audio tag of rotmg theme song-->
+      <div class="center">
+        <audio controls>
+            <source src="rotmg-main-theme.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+          </audio> 
+      </div>
+      <br><br>
+      <!--Canvas tag-->
+      <div class="center">
+            <canvas id="canvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+                Your browser does not support the HTML canvas tag.</canvas>
+                <script>
+                var c = document.getElementById("canvas");
+                var ctx = c.getContext("2d");
+                
+                // Create gradient
+                var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+                grd.addColorStop(0,"blue");
+                grd.addColorStop(1,"purple");
+                
+                // Fill with gradient
+                ctx.fillStyle = grd;
+                ctx.fillRect(10,10,150,80);
+                </script>
+    </div>
+</body>
+</html>
