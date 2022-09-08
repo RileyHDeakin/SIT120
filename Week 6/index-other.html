@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    </head>
+    <body>
+        
+        <div id="username">
+              <input v-model="message" placeholder="Username" />
+              <p>Username : {{ message }}</p>
+        </div>
+        <script>
+            var app = new Vue({
+                el: '#username',
+                data: {
+                    message: ''
+                }
+            })
+            </script>
+            <br><br>
+            <div id="email">
+                <input v-model="message" placeholder="Email" />
+                <p>Email : {{ message }}</p>
+            </div>
+            <script>
+            var app = new Vue({
+                el: '#email',
+                data: {
+                    message: ''
+                }
+            })  
+            </script>
+            <div id="app">
+                <select v-model="selected">
+                    <option value="" disabled>Please select one</option>
+                    <option v-for="n in 4">{{ n }}</option>
+                </select>
+                <span> Selected: {{selected}}</span>
+                </div>
+            <script>
+                var app = new Vue({
+                    el: "#app",
+                    data: {
+                        selected: '',
+                    }
+                });
+            </script>
+        
+
+
+            <div id="checkbox"> 
+                <input type="checkbox" id="checkbox" v-model="checked"/>
+                <label for="checkbox">{{ checked }}</label>
+                <br><br>
+                <input type="checkbox" id="Riley" value="Riley" v-model="checkedNames" />
+                <label for="Riley">Riley</label>
+                <input type="checkbox" id="Danial" value="Daniel" v-model="checkedNames" />
+                <label for="Daniel">Daniel</label>
+                <input type="checkbox" id="Robert" value="Robert" v-model="checkedNames" />
+                <label for="Robert">Robert</label>
+                <br><br>
+                <span>Checked names: {{ checkedNames }}</span>
+
+            </div>
+            <script>
+                var app = new Vue({
+                    el: '#checkbox',
+                    data: {
+                        message: "Hello Vue!",
+                        checked: false,
+                        checkedNames: [],
+                    },
+                });
+            </script>
+        </body>
+        
+</html>
