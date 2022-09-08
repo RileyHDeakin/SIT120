@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="app">
+      {{ message }}
+    </div>
+    <script>
+      var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello world Vue!'
+  }
+})
+    </script>
+    
+<div id="h1">
+<button @click="awesome = !awesome">toggle</button>
+<h1 v-if="awesome">Vue is awesome</h1>
+<h1 v-else="awesome">Vue is not awesome</h1>
+</div>
+ <script>
+  var app = new Vue({
+    el: '#h1',
+    data: {
+      awesome : true
+    }
+  })
+  </script>
+
+<div>
+  <h1 v-show="ok">Yeah the bois</h1>
+</div>
+
+
+
+<div class="flex-container">
+  <div id="boi">
+    <button @click="awesome = !awesome">toggle</button>
+    <p v-if="awesome">True</p>
+    <p v-else="awesome">False</p>
+  </div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+</div>
+
+<script>
+  var app = new Vue({
+    el: '#boi',
+    data: {
+      awesome : true
+    }
+  })
+  </script>
+
+
+  </body>
+</html>
