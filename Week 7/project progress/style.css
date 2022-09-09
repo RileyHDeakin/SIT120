@@ -1,0 +1,168 @@
+.navigation {
+    display: flex;
+    list-style-type: none;
+}
+
+#message {
+	color: white;
+	text-align: message;
+}
+
+.parent {
+    padding: 0 10px;
+    cursor: pointer;
+    color: white;
+}
+
+body {
+    background-color: #222;
+}
+
+#text_stuff {
+	color: white;
+}
+
+#javascript-button {
+	text-align: center;
+}
+
+.navigationWrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px;
+    background-color: #22333B;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+    color: white;
+    text-transform: uppercase;
+    width: 100%;
+    height: 100px;
+}
+
+.hidden_over {
+    overflow: hidden;
+}
+
+.responsive {
+  height: 300px;
+  width: auto;
+  max-height: 100px;
+  max-width: 100%;
+}
+
+
+.logo_responsive {
+  height: auto;
+  width: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    font-family: Sans-serif;
+    font-size: 22px;
+    padding: 10px;
+}
+
+    .link:hover {
+      color: #C6AC8F;
+
+
+    }
+
+
+    ul {
+        text-align: center;
+    }
+
+
+    h1 {
+        text-align: center;
+        color: #EAE0D5;
+        font: "roboto", san-serif;
+        padding: 20px;
+        font-family: Sans-serif;
+    }
+
+    .title-img {
+        width: 19%;
+        position: relative;
+        right: auto;
+    }
+
+
+    h3 {
+        color: #EAE0D5;
+        text-align: center;
+        font-family: Sans-serif;
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #1C0B19;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        color: white;
+        border-radius: 20px;
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+	  .button {
+		text-align: center;
+	  }
+
+      .img-desc {
+        text-align: center;
+        color: white;
+        padding: 5px;
+      }
+
+      p {
+        font-family: Sans-serif;
+      }
+
+	  #app {
+		text-align: center;
+	  }
+
+	  #app:hover {
+		color: grey;
+	  }
+
+
+    @media screen and (min-width: 320px) and (max-width: 480px){
+      p {
+        width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+      .link {
+        font-size: 11px;
+      }
+    }
