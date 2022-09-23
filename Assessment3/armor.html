@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+        <title>ROTMG - Collection tracker</title>
+        <!--linking a stylesheet for larger screen as well as one for smaller screens-->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./armors/leather/leather_check_off.css">
+        <script src= "./armors/leather/leather_check_off.js"></script>
+    </head>
+</html>
+<body>
+    <nav class="navigationWrap">
+      <!--setting a logo for the website, responsive class will cause logo
+          to not be bigger than the navigation bar -->  
+        <logo class="logo_responsive">
+            <img class="responsive" src="./logo-test1.jpg" />
+        </logo>
+        <!--start of the links. The navigation class uses flex to display the items in a row-->
+    <ul class="navigation">
+        <li class="parent"><a class="link" href="./index.html">Home</a></li>
+        <!--new div for the dropdown link-->
+        <div class="dropdown">
+           <li class="parent"><a class="link" href="#">Collections</a></li> 
+            <div class="dropdown-content">
+                <a class="link" href="./weapons.html">Weapons</a>
+                <a class="link" href="#">Armor</a>
+                <a class="link" href="./rings.html">Rings</a>
+                <a class="link" href="./abilites.html">Abilities</a>
+            </div>
+        </div>
+        <li class="parent"><a class="link" href="./contact.html">Contact</a></li>
+        <li class="parent"><a class="link" href="./About.html">About</a></li>
+        <li class="parent"><a class="link" href="./login.html">Login</a></li>
+    </ul>
+    </nav>
+    <br>
+    <br><br>
+<div class="center_time" id="leather_armor">
+   <h2 class="collection_headings">Leather Armor</h2> 
+    <img class="collection_image" v-for="item in items" :key="item.img" :src="item.img" :text="item.text" :class="{done:item.done}">
+    <button id="leather_button_1" onclick="check_leather_T1()"></button>    
+</div> 
+    <script>
+        new Vue({
+       el: '#leather_armor',
+
+         data: {
+            items: [
+                {
+                    img: "./armors/leather/t1_leather.png",
+                    id: "leather_t1",
+                },
+                {
+                    img: "./armors/leather/t2_leather.png",
+                    done: false
+                },
+                {
+                    img: "./armors/leather/t3_leather.png",
+                    done: false
+                },
+                {
+                    img: "./armors/leather/t4_leather.png",
+                    done: false
+                },
+                {
+                    img: "./armors/leather/t5_leather.png",
+                    done: false
+                },
+                {
+                    img: "./armors/leather/t6_leather.png",
+                    done: false
+                },
+                {
+                    img: "./armors/leather/t7_leather.png",
+                    done: false
+                },
+                {
+                    img: "./armors/leather/t8_leather.png",
+                    done: false
+                },
+                {
+                    img: "./armors/leather/t9_leather.png",
+                    done: false
+                },
+                {
+                    img: "./armors/leather/t10_leather.png",
+                    done: false
+                },
+                {
+                    img: "./armors/leather/t11_leather.png",
+                    done: false
+                },
+                {
+                    img: "./armors/leather/t12_leather.png",
+                    done: false
+                },
+                {
+                    img: "./armors/leather/t13_leather.png",
+                    done: false
+                },
+                {
+                    img: "./armors/leather/t14_leather.png",
+                    done: false
+                }
+     
+            ]
+        },
+    });
+    </script>
+    <br><br>
+    <div class="center_time" id="robe_armor">
+           <h2 class="collection_headings">Robe</h2> 
+            <img class="collection_image" v-for="item in items" :key="item.img" :src="item.img" :text="item.text" :class="{done:item.done}">
+        </div> 
+    <script>
+                new Vue({
+               el: '#robe_armor',
+        
+                 data: {
+                    items: [
+                        {
+                            img: "./armors/robe/t1_robe.png",
+                            id: ""
+                        },
+                        {
+                            img: "./armors/robe/t2_robe.png",
+                            done: false
+                        },
+                        {
+                            img: "./armors/robe/t3_robe.png",
+                            done: false
+                        },
+                        {
+                            img: "./armors/robe/t4_robe.png",
+                            done: false
+                        },
+                        {
+                            img: "./armors/robe/t5_robe.png",
+                            done: false
+                        },
+                        {
+                            img: "./armors/robe/t6_robe.png",
+                            done: false
+                        },
+                        {
+                            img: "./armors/robe/t7_robe.png",
+                            done: false
+                        },
+                        {
+                            img: "./armors/robe/t8_robe.png",
+                            done: false
+                        },
+                        {
+                            img: "./armors/robe/t9_robe.png",
+                            done: false
+                        },
+                        {
+                            img: "./armors/robe/t10_robe.png",
+                            done: false
+                        },
+                        {
+                            img: "./armors/robe/t11_robe.png",
+                            done: false
+                        },
+                        {
+                            img: "./armors/robe/t12_robe.png",
+                            done: false
+                        },
+                        {
+                            img: "./armors/robe/t13_robe.png",
+                            done: false
+                        },
+                        {
+                            img: "./armors/robe/t14_robe.png",
+                            done: false
+                        }
+             
+                    ]
+                },
+            });
+    </script>
+    <br><br>
+    <div class="center_time" id="heavey_armor">
+        <h2 class="collection_headings">Heavy Armor</h2> 
+         <img class="collection_image" v-for="item in items" :key="item.img" :src="item.img" :text="item.text" :class="{done:item.done}">
+         </div> 
+         <script>
+             new Vue({
+            el: '#heavey_armor',
+     
+              data: {
+                 items: [
+                     {
+                         img: "./armors/heavy/t1_heavy.png",
+                         text: "T1"
+                     },
+                     {
+                         img: "./armors/heavy/t2_heavy.png",
+                         done: false
+                     },
+                     {
+                         img: "./armors/heavy/t3_heavy.png",
+                         done: false
+                     },
+                     {
+                         img: "./armors/heavy/t4_heavy.png",
+                         done: false
+                     },
+                     {
+                         img: "./armors/heavy/t5_heavy.png",
+                         done: false
+                     },
+                     {
+                         img: "./armors/heavy/t6_heavy.png",
+                         done: false
+                     },
+                     {
+                         img: "./armors/heavy/t7_heavy.png",
+                         done: false
+                     },
+                     {
+                         img: "./armors/heavy/t8_heavy.png",
+                         done: false
+                     },
+                     {
+                         img: "./armors/heavy/t9_heavy.png",
+                         done: false
+                     },
+                     {
+                         img: "./armors/heavy/t10_heavy.png",
+                         done: false
+                     },
+                     {
+                         img: "./armors/heavy/t11_heavy.png",
+                         done: false
+                     },
+                     {
+                         img: "./armors/heavy/t12_heavy.png",
+                         done: false
+                     },
+                     {
+                         img: "./armors/heavy/t13_heavy.png",
+                         done: false
+                     },
+                     {
+                         img: "./armors/heavy/t14_heavy.png",
+                         done: false
+                     }
+          
+                 ]
+             },
+         });
+         </script>
+         <br><br>

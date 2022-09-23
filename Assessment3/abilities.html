@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+        <title>ROTMG - Collection tracker</title>
+        <!--linking a stylesheet for larger screen as well as one for smaller screens-->
+        <link rel="stylesheet" href="style.css">
+		<script src="javascript.js"></script>
+    </head>
+</html>
+<body>
+    
+    <nav class="navigationWrap">
+      <!--setting a logo for the website, responsive class will cause logo
+          to not be bigger than the navigation bar -->  
+        <logo class="logo_responsive">
+            <img class="responsive" src="./logo-test1.jpg" />
+        </logo>
+        <!--start of the links. The navigation class uses flex to display the items in a row-->
+    <ul class="navigation">
+        <li class="parent"><a class="link" href="./index.html">Home</a></li>
+        <!--new div for the dropdown link-->
+        <div class="dropdown">
+           <li class="parent"><a class="link" href="#">Collections</a></li> 
+            <div class="dropdown-content">
+                <a class="link" href="./weapons.html">Weapons</a>
+                <a class="link" href="./armor.html">Armor</a>
+                <a class="link" href="./rings.html">Rings</a>
+                <a class="link" href="#">Abilities</a>
+            </div>
+        </div>
+        <li class="parent"><a class="link" href="./contact.html">Contact</a></li>
+        <li class="parent"><a class="link" href="./About.html">About</a></li>
+        <li class="parent"><a class="link" href="./login.html">Login</a></li>
+    </ul>
+    </nav>
+    <br>
+    <br><br>
+    <div class="center_time" id="shields">
+       <h2 class="collection_headings">Shields</h2> 
+        <img class="collection_image" v-for="item in items" :key="item.img" :src="item.img" :text="item.text" :class="{done:item.done}">
+        </div> 
+        <script>
+            new Vue({
+           el: '#shields',
+    
+             data: {
+                items: [
+                    {
+                        img: "./ability/shields/t0_shield.png",
+                        text: "T1"
+                    },
+                    {
+                        img: "./ability/shields/t1_shield.png",
+                        done: false
+                    },
+                    {
+                        img: "./ability/shields/t2_shield.png",
+                        done: false
+                    },
+                    {
+                        img: "./ability/shields/t3_shield.png",
+                        done: false
+                    },
+                    {
+                        img: "./ability/shields/t4_shield.png",
+                        done: false
+                    },
+                    {
+                        img: "./ability/shields/t5_shield.png",
+                        done: false
+                    },
+                    {
+                        img: "./ability/shields/t6_shield.png",
+                        done: false
+                    },
+                    {
+                        img: "./ability/shields/t7_shield.png",
+                        done: false
+                    }                  
+                           
+         
+                ]
+            },
+        });
+        </script>
+      <br><br>
+      <div class="center_time" id="cloaks">
+         <h2 class="collection_headings">Cloaks</h2> 
+          <img class="collection_image" v-for="item in items" :key="item.img" :src="item.img" :text="item.text" :class="{done:item.done}">
+          </div> 
+          <script>
+              new Vue({
+             el: '#cloaks',
+      
+               data: {
+                  items: [
+                      {
+                          img: "./ability/cloaks/t0_cloak.png",
+                          text: "T1"
+                      },
+                      {
+                          img: "./ability/cloaks/t1_cloak.png",
+                          done: false
+                      },
+                      {
+                          img: "./ability/cloaks/t2_cloak.png",
+                          done: false
+                      },
+                      {
+                          img: "./ability/cloaks/t3_cloak.png",
+                          done: false
+                      },
+                      {
+                          img: "./ability/cloaks/t4_cloak.png",
+                          done: false
+                      },
+                      {
+                          img: "./ability/cloaks/t5_cloak.png",
+                          done: false
+                      },
+                      {
+                          img: "./ability/cloaks/t6_cloak.png",
+                          done: false
+                      },
+                      {
+                          img: "./ability/cloaks/t7_cloak.png",
+                          done: false
+                      }                  
+                             
+           
+                  ]
+              },
+          });
+          </script>
+            <br><br>
+            <div class="center_time" id="helms">
+               <h2 class="collection_headings">Helms</h2> 
+                <img class="collection_image" v-for="item in items" :key="item.img" :src="item.img" :text="item.text" :class="{done:item.done}">
+                </div> 
+                <script>
+                    new Vue({
+                   el: '#helms',
+            
+                     data: {
+                        items: [
+                            {
+                                img: "./ability/helms/t0_helm.png",
+                                text: "T1"
+                            },
+                            {
+                                img: "./ability/helms/t1_helm.png",
+                                done: false
+                            },
+                            {
+                                img: "./ability/helms/t2_helm.png",
+                                done: false
+                            },
+                            {
+                                img: "./ability/helms/t3_helm.png",
+                                done: false
+                            },
+                            {
+                                img: "./ability/helms/t4_helm.png",
+                                done: false
+                            },
+                            {
+                                img: "./ability/helms/t5_helm.png",
+                                done: false
+                            },
+                            {
+                                img: "./ability/helms/t6_helm.png",
+                                done: false
+                            },
+                            {
+                                img: "./ability/helms/t7_helm.png",
+                                done: false
+                            }                  
+                                   
+                 
+                        ]
+                    },
+                });
+                </script>
+    <br><br>
+    <div class="center_time" id="lutes">
+       <h2 class="collection_headings">lutes</h2> 
+        <img class="collection_image" v-for="item in items" :key="item.img" :src="item.img" :text="item.text" :class="{done:item.done}">
+        </div> 
+        <script>
+            new Vue({
+           el: '#lutes',
+    
+             data: {
+                items: [
+                    {
+                        img: "./ability/lutes/t0_lute.png",
+                        text: "T1"
+                    },
+                    {
+                        img: "./ability/lutes/t1_lute.png",
+                        done: false
+                    },
+                    {
+                        img: "./ability/lutes/t2_lute.png",
+                        done: false
+                    },
+                    {
+                        img: "./ability/lutes/t3_lute.png",
+                        done: false
+                    },
+                    {
+                        img: "./ability/lutes/t4_lute.png",
+                        done: false
+                    },
+                    {
+                        img: "./ability/lutes/t5_lute.png",
+                        done: false
+                    },
+                    {
+                        img: "./ability/lutes/t6_lute.png",
+                        done: false
+                    },
+                    {
+                        img: "./ability/lutes/t7_lute.png",
+                        done: false
+                    }                  
+                           
+         
+                ]
+            },
+        });
+        </script>
+     <br><br>
+     <div class="center_time" id="maces">
+        <h2 class="collection_headings">Maces</h2> 
+         <img class="collection_image" v-for="item in items" :key="item.img" :src="item.img" :text="item.text" :class="{done:item.done}">
+         </div> 
+         <script>
+             new Vue({
+            el: '#maces',
+     
+              data: {
+                 items: [
+                     {
+                         img: "./ability/maces/t0_mace.png",
+                         text: "T1"
+                     },
+                     {
+                         img: "./ability/maces/t1_mace.png",
+                         done: false
+                     },
+                     {
+                         img: "./ability/maces/t2_mace.png",
+                         done: false
+                     },
+                     {
+                         img: "./ability/maces/t3_mace.png",
+                         done: false
+                     },
+                     {
+                         img: "./ability/maces/t4_mace.png",
+                         done: false
+                     },
+                     {
+                         img: "./ability/maces/t5_mace.png",
+                         done: false
+                     },
+                     {
+                         img: "./ability/maces/t6_mace.png",
+                         done: false
+                     },
+                     {
+                         img: "./ability/maces/t7_mace.png",
+                         done: false
+                     }                  
+                            
+          
+                 ]
+             },
+         });
+         </script>
+         <br><br>
+         <div class="center_time" id="spells">
+            <h2 class="collection_headings">Spells</h2> 
+             <img class="collection_image" v-for="item in items" :key="item.img" :src="item.img" :text="item.text" :class="{done:item.done}">
+             </div> 
+             <script>
+                 new Vue({
+                el: '#spells',
+         
+                  data: {
+                     items: [
+                         {
+                             img: "./ability/spells/t0_spell.png",
+                             text: "T1"
+                         },
+                         {
+                             img: "./ability/spells/t1_spell.png",
+                             done: false
+                         },
+                         {
+                             img: "./ability/spells/t2_spell.png",
+                             done: false
+                         },
+                         {
+                             img: "./ability/spells/t3_spell.png",
+                             done: false
+                         },
+                         {
+                             img: "./ability/spells/t4_spell.png",
+                             done: false
+                         },
+                         {
+                             img: "./ability/spells/t5_spell.png",
+                             done: false
+                         },
+                         {
+                             img: "./ability/spells/t6_spell.png",
+                             done: false
+                         },
+                         {
+                             img: "./ability/spells/t7_spell.png",
+                             done: false
+                         }                  
+                                
+              
+                     ]
+                 },
+             });
+             </script>
+             <br><br>

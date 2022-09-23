@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+        <title>ROTMG - Collection tracker</title>
+        <!--linking a stylesheet for larger screen as well as one for smaller screens-->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./weapons/daggers/daggers_check_off.css">
+        <script src= "./weapons/daggers/daggers_javascript.js"></script>
+        <link rel="stylesheet" href="./weapons/bows/bows_check_off.css">
+        <script src= "./weapons/bows/bows_javascript.js"></script>
+    </head>
+</html>
+<body>
+    
+    <nav class="navigationWrap">
+      <!--setting a logo for the website, responsive class will cause logo
+          to not be bigger than the navigation bar -->  
+        <logo class="logo_responsive">
+            <img class="responsive" src="./logo-test1.jpg" />
+        </logo>
+        <!--start of the links. The navigation class uses flex to display the items in a row-->
+    <ul class="navigation">
+        <li class="parent"><a class="link" href="./index.html">Home</a></li>
+        <!--new div for the dropdown link-->
+        <div class="dropdown">
+           <li class="parent"><a class="link" href="#">Collections</a></li> 
+            <div class="dropdown-content">
+                <a class="link" href="#">Weapons</a>
+                <a class="link" href="./armor.html">Armor</a>
+                <a class="link" href="./rings.html">Rings</a>
+                <a class="link" href="./abilities.html">Abilities</a>
+            </div>
+        </div>
+        <li class="parent"><a class="link" href="./contact.html">Contact</a></li>
+        <li class="parent"><a class="link" href="./About.html">About</a></li>
+        <li class="parent"><a class="link" href="./login.html">Login</a></li>
+    </ul>
+    </nav>
+    <br>
+    <div id="app">
+    <h2 class="collection_headings">Daggers</h2> 
+       <img class="collection_image" v-for="item in items" :id="item.id" :src="item.img">
+        <button id="button_1" onclick="check_dagger_T1()"></button>
+        <button id="button_2" onclick="check_dagger_T2()"></button>
+        <button id="button_3" onclick="check_dagger_T3()"></button>
+        <button id="button_4" onclick="check_dagger_T4()"></button>
+        <button id="button_5" onclick="check_dagger_T5()"></button>
+        <button id="button_6" onclick="check_dagger_T6()"></button>
+        <button id="button_7" onclick="check_dagger_T7()"></button>
+        <button id="button_8" onclick="check_dagger_T8()"></button>
+        <button id="button_9" onclick="check_dagger_T9()"></button>
+        <button id="button_10" onclick="check_dagger_T10()"></button>
+        <button id="button_11" onclick="check_dagger_T11()"></button>
+        <button id="button_12" onclick="check_dagger_T12()"></button>
+        <button id="button_13" onclick="check_dagger_T13()"></button>
+        <button id="button_14" onclick="check_dagger_T14()"></button>
+    </div> 
+    <script>
+        new Vue({
+       el: '#app',
+            
+         data: {
+            items: [
+                {
+                    img: "./weapons/daggers/t0_dagger.png",
+                    id: "1",
+                    
+                },
+                {
+                    img: "./weapons/daggers/t1_dagger.png",
+                    id: "2",
+                },
+                {
+                    img: "./weapons/daggers/t3_dagger.png",
+                    id: "3",
+                },
+                {
+                    img: "./weapons/daggers/t4_dagger.png",
+                    id: "4",
+                },
+                {
+                    img: "./weapons/daggers/t5_dagger.png",
+                    id: "5",
+                },
+                {
+                    img: "./weapons/daggers/t6_dagger.png",
+                    id: "6",
+                },
+                {
+                    img: "./weapons/daggers/t7_dagger.png",
+                    id: "7",
+                },
+                {
+                    img: "./weapons/daggers/t8_dagger.png",
+                    id: "8",
+                },
+                {
+                    img: "./weapons/daggers/t9_dagger.png",
+                    id: "9",
+                },
+                {
+                    img: "./weapons/daggers/t10_dagger.png",
+                    id: "10",
+                },
+                {
+                    img: "./weapons/daggers/t11_dagger.png",
+                    id: "11",
+                },
+                {
+                    img: "./weapons/daggers/t12_dagger.png",
+                    id: "12",
+                },
+                {
+                    img: "./weapons/daggers/t13_dagger.png",
+                    id: "13",
+                },
+                {
+                    img: "./weapons/daggers/t14_dagger.png",
+                    id: "14",
+                }
+            ]
+        },
+    });
+    </script>
+<br><br>
+<div class="center_time" id="bows">
+   <h2 class="collection_headings">Bows</h2> 
+    <img class="collection_image" v-for="item in items" :key="item.img" :src="item.img" :text="item.text" :class="{done:item.done}">  
+</div> 
+    <script>
+        new Vue({
+       el: '#bows',
+
+         data: {
+            items: [
+                {
+                    img: "./weapons/bows/t0_bow.png",
+                    id: "bow_0",
+                },
+                {
+                    img: "./weapons/bows/t1_bow.png",
+                    id: "bow_1"
+                },
+                {
+                    img: "./weapons/bows/t2_bow.png",
+                    id: "bow_2"
+                },
+                {
+                    img: "./weapons/bows/t3_bow.png",
+                    id: "bow_3"
+                },
+                {
+                    img: "./weapons/bows/t4_bow.png",
+                    id: "bow_4"
+                },
+                {
+                    img: "./weapons/bows/t5_bow.png",
+                    id: "bow_5"
+                },
+                {
+                    img: "./weapons/bows/t6_bow.png",
+                    id: "bow_6"
+                },
+                {
+                    img: "./weapons/bows/t7_bow.png",
+                    id: "bow_7"
+                },
+                {
+                    img: "./weapons/bows/t8_bow.png",
+                    id: "bow_8"
+                },
+                {
+                    img: "./weapons/bows/t9_bow.png",
+                    id: "bow_9"
+                },
+                {
+                    img: "./weapons/bows/t10_bow.png",
+                    id: "bow_10"
+                },
+                {
+                    img: "./weapons/bows/t11_bow.png",
+                    id: "bow_11"
+                },
+                {
+                    img: "./weapons/bows/t12_bow.png",
+                    id: "bow_12"
+                },
+                {
+                    img: "./weapons/bows/t13_bow.png",
+                    id: "bow_13"
+                },
+                {
+                    img: "./weapons/bows/t14_bow.png",
+                    id: "bow_14"
+                }
+     
+            ]
+        },
+    });
+    </script>
+<br><br>
+<div class="center_time" id="swords">
+   <h2 class="collection_headings">Swords</h2> 
+    <img onclick="check_off()" class="collection_image" v-for="item in items" :key="item.img" :src="item.img" class="responsive">
+    </div> 
+    <script>
+        new Vue({
+       el: '#swords',
+
+         data: {
+            items: [
+                {
+                    img: "./weapons/swords/t0_sword.png",
+                    text: "T1"
+                },
+                {
+                    img: "./weapons/swords/t1_sword.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/swords/t2_sword.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/swords/t3_sword.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/swords/t4_sword.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/swords/t5_sword.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/swords/t6_sword.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/swords/t7_sword.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/swords/t8_sword.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/swords/t9_sword.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/swords/t10_sword.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/swords/t11_sword.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/swords/t12_sword.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/swords/t13_sword.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/swords/t14_sword.png",
+                    done: false
+                }
+     
+            ]
+        },
+    });
+    </script>
+<br><br>
+<div class="center_time" id="wands">
+   <h2 class="collection_headings">Wands</h2> 
+    <img class="collection_image" v-for="item in items" :key="item.img" :src="item.img" :text="item.text" :class="{done:item.done}">
+    </div> 
+    <script>
+        new Vue({
+       el: '#wands',
+
+         data: {
+            items: [
+                {
+                    img: "./weapons/wands/t0_wands.png",
+                    text: "T1"
+                },
+                {
+                    img: "./weapons/wands/t1_wands.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/wands/t2_wands.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/wands/t3_wands.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/wands/t4_wands.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/wands/t5_wands.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/wands/t6_wands.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/wands/t7_wands.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/wands/t8_wands.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/wands/t9_wands.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/wands/t10_wands.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/wands/t11_wands.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/wands/t12_wands.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/wands/t13_wands.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/wands/t14_wands.png",
+                    done: false
+                }
+     
+            ]
+        },
+    });
+    </script>
+<br><br>
+<div class="center_time" id="staffs">
+   <h2 class="collection_headings">Wands</h2> 
+    <img class="collection_image" v-for="item in items" :key="item.img" :src="item.img" :text="item.text" :class="{done:item.done}">
+    </div> 
+    <script>
+        new Vue({
+       el: '#staffs',
+
+         data: {
+            items: [
+                {
+                    img: "./weapons/staffs/t1_staff.png",
+                    text: "T1"
+                },
+                {
+                    img: "./weapons/staffs/t2_staff.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/staffs/t3_staff.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/staffs/t4_staff.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/staffs/t5_staff.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/staffs/t6_staff.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/staffs/t7_staff.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/staffs/t8_staff.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/staffs/t9_staff.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/staffs/t10_staff.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/staffs/t11_staff.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/staffs/t11_staff.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/staffs/t12_staff.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/staffs/t13_staff.png",
+                    done: false
+                },
+                {
+                    img: "./weapons/staffs/t14_staff.png",
+                    done: false
+                }
+     
+            ]
+        },
+    });
+    </script>

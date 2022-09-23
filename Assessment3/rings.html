@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+        <title>ROTMG - Collection tracker</title>
+        <!--linking a stylesheet for larger screen as well as one for smaller screens-->
+        <link rel="stylesheet" href="style.css">
+		<script src="javascript.js"></script>
+    </head>
+<body>
+    
+    <nav class="navigationWrap">
+      <!--setting a logo for the website, responsive class will cause logo
+          to not be bigger than the navigation bar -->  
+        <logo class="logo_responsive">
+            <img class="responsive" src="./logo-test1.jpg" />
+        </logo>
+        <!--start of the links. The navigation class uses flex to display the items in a row-->
+    <ul class="navigation">
+        <li class="parent"><a class="link" href="./index.html">Home</a></li>
+        <!--new div for the dropdown link-->
+        <div class="dropdown">
+           <li class="parent"><a class="link" href="#">Collections</a></li> 
+            <div class="dropdown-content">
+                <a class="link" href="./weapons.html">Weapons</a>
+                <a class="link" href="./armor.html">Armor</a>
+                <a class="link" href="#">Rings</a>
+                <a class="link" href="./abilities.html">Abilities</a>
+            </div>
+        </div>
+        <li class="parent"><a class="link" href="./contact.html">Contact</a></li>
+        <li class="parent"><a class="link" href="./About.html">About</a></li>
+        <li class="parent"><a class="link" href="./login.html">Login</a></li>
+    </ul>
+    </nav>
+    <br>
+    <br><br>
+    <div class="center_time" id="health_rings">
+        <h2 class="collection_headings">Health Rings</h2> 
+         <img class="collection_image" v-for="item in items" :key="item.img" :src="item.img" :text="item.text" :class="{done:item.done}">
+         </div> 
+         <script>
+             new Vue({
+            el: '#health_rings',
+     
+              data: {
+                 items: [
+                     {
+                         img: "./rings/health/t1_health.png",
+                         text: "T1"
+                     },
+                     {
+                         img: "./rings/health/t2_health.png",
+                         done: false
+                     },
+                     {
+                         img: "./rings/health/t3_health.png",
+                         done: false
+                     },
+                     {
+                         img: "./rings/health/t4_health.png",
+                         done: false
+                     },
+                     {
+                         img: "./rings/health/t5_health.png",
+                         done: false
+                     },
+                     {
+                         img: "./rings/health/t6_health.png",
+                         done: false
+                     }
+                 ]
+             },
+         });
+         </script>
+          <br><br>
+          <div class="center_time" id="magic_rings">
+              <h2 class="collection_headings">Magic Rings</h2> 
+               <img class="collection_image" v-for="item in items" :key="item.img" :src="item.img" :text="item.text" :class="{done:item.done}">
+               </div> 
+               <script>
+                   new Vue({
+                  el: '#magic_rings',
+           
+                    data: {
+                       items: [
+                           {
+                               img: "./rings/magic/t1_magic.png",
+                               text: "T1"
+                           },
+                           {
+                               img: "./rings/magic/t2_magic.png",
+                               done: false
+                           },
+                           {
+                               img: "./rings/magic/t3_magic.png",
+                               done: false
+                           },
+                           {
+                               img: "./rings/magic/t4_magic.png",
+                               done: false
+                           },
+                           {
+                               img: "./rings/magic/t5_magic.png",
+                               done: false
+                           },
+                           {
+                               img: "./rings/magic/t6_magic.png",
+                               done: false
+                           }
+                       ]
+                   },
+               });
+               </script>
+           <br><br>
+           <div class="center_time" id="attack_rings">
+               <h2 class="collection_headings">Attack Rings</h2> 
+                <img class="collection_image" v-for="item in items" :key="item.img" :src="item.img" :text="item.text" :class="{done:item.done}">
+                </div> 
+                <script>
+                    new Vue({
+                   el: '#attack_rings',
+            
+                     data: {
+                        items: [
+                            {
+                                img: "./rings/attack/t1_attack.png",
+                                text: "T1"
+                            },
+                            {
+                                img: "./rings/attack/t2_attack.png",
+                                done: false
+                            },
+                            {
+                                img: "./rings/attack/t3_attack.png",
+                                done: false
+                            },
+                            {
+                                img: "./rings/attack/t4_attack.png",
+                                done: false
+                            },
+                            {
+                                img: "./rings/attack/t5_attack.png",
+                                done: false
+                            },
+                            {
+                                img: "./rings/attack/t6_attack.png",
+                                done: false
+                            }
+                        ]
+                    },
+                });
+                </script>
+          <br><br>
+          <div class="center_time" id="speed_rings">
+              <h2 class="collection_headings">Speed Rings</h2> 
+               <img class="collection_image" v-for="item in items" :key="item.img" :src="item.img" :text="item.text" :class="{done:item.done}">
+               </div> 
+               <script>
+                   new Vue({
+                  el: '#speed_rings',
+           
+                    data: {
+                       items: [
+                           {
+                               img: "./rings/speed/t1_speed.png",
+                               text: "T1"
+                           },
+                           {
+                               img: "./rings/speed/t2_speed.png",
+                               done: false
+                           },
+                           {
+                               img: "./rings/speed/t3_speed.png",
+                               done: false
+                           },
+                           {
+                               img: "./rings/speed/t4_speed.png",
+                               done: false
+                           },
+                           {
+                               img: "./rings/speed/t5_speed.png",
+                               done: false
+                           },
+                           {
+                               img: "./rings/speed/t6_speed.png",
+                               done: false
+                           }
+                       ]
+                   },
+               });
+               </script>
+               <br><br>
+               <div class="center_time" id="vitality_rings">
+                   <h2 class="collection_headings">Vitality Rings</h2> 
+                    <img class="collection_image" v-for="item in items" :key="item.img" :src="item.img" :text="item.text" :class="{done:item.done}">
+                    </div> 
+                    <script>
+                        new Vue({
+                       el: '#vitality_rings',
+                
+                         data: {
+                            items: [
+                                {
+                                    img: "./rings/vitality/t1_vitality.png",
+                                    text: "T1"
+                                },
+                                {
+                                    img: "./rings/vitality/t2_vitality.png",
+                                    done: false
+                                },
+                                {
+                                    img: "./rings/vitality/t3_vitality.png",
+                                    done: false
+                                },
+                                {
+                                    img: "./rings/vitality/t4_vitality.png",
+                                    done: false
+                                },
+                                {
+                                    img: "./rings/vitality/t5_vitality.png",
+                                    done: false
+                                },
+                                {
+                                    img: "./rings/vitality/t6_vitality.png",
+                                    done: false
+                                }
+                            ]
+                        },
+                    });
+                    </script>
+                 <br><br>
+                 <div class="center_time" id="defence_rings">
+                     <h2 class="collection_headings">Defence Rings</h2> 
+                      <img class="collection_image" v-for="item in items" :key="item.img" :src="item.img" :text="item.text" :class="{done:item.done}">
+                      </div> 
+                      <script>
+                          new Vue({
+                         el: '#defence_rings',
+                  
+                           data: {
+                              items: [
+                                  {
+                                      img: "./rings/defence/t0_defence.png",
+                                      text: "T1"
+                                  },
+                                  {
+                                      img: "./rings/defence/t1_defence.png",
+                                      done: false
+                                  },
+                                  {
+                                      img: "./rings/defence/t2_defence.png",
+                                      done: false
+                                  },
+                                  {
+                                      img: "./rings/defence/t3_defence.png",
+                                      done: false
+                                  },
+                                  {
+                                      img: "./rings/defence/t4_defence.png",
+                                      done: false
+                                  },
+                                  {
+                                      img: "./rings/defence/t5_defence.png",
+                                      done: false
+                                  },
+                                  {
+                                      img: "./rings/defence/t6_defence.png",
+                                      done: false
+                                  }
+                              ]
+                          },
+                      });
+                      </script>
+                  <br><br>
+                  <div class="center_time" id="wisdom_rings">
+                      <h2 class="collection_headings">Wisdom Rings</h2> 
+                       <img class="collection_image" v-for="item in items" :key="item.img" :src="item.img" :text="item.text" :class="{done:item.done}">
+                       </div> 
+                       <script>
+                           new Vue({
+                          el: '#wisdom_rings',
+                   
+                            data: {
+                               items: [
+                                   {
+                                       img: "./rings/wisdom/t1_wisdom.png",
+                                       text: "T1"
+                                   },
+                                   {
+                                       img: "./rings/wisdom/t2_wisdom.png",
+                                       done: false
+                                   },
+                                   {
+                                       img: "./rings/wisdom/t3_wisdom.png",
+                                       done: false
+                                   },
+                                   {
+                                       img: "./rings/wisdom/t4_wisdom.png",
+                                       done: false
+                                   },
+                                   {
+                                       img: "./rings/wisdom/t5_wisdom.png",
+                                       done: false
+                                   },
+                                   {
+                                       img: "./rings/wisdom/t6_wisdom.png",
+                                       done: false
+                                   }                               
+                                ]
+                           },
+                       });
+                       </script>
+                      <br><br>
+                      <div class="center_time" id="dex_rings">
+                          <h2 class="collection_headings">Dexterity Rings</h2> 
+                           <img class="collection_image" v-for="item in items" :key="item.img" :src="item.img" :text="item.text" :class="{done:item.done}">
+                           </div> 
+                           <script>
+                               new Vue({
+                              el: '#dex_rings',
+                       
+                                data: {
+                                   items: [
+                                       {
+                                           img: "./rings/dexterity/t1_dex.png",
+                                           id: "1"
+                                       },
+                                       {
+                                           img: "./rings/dexterity/t2_dex.png",
+                                           done: false
+                                       },
+                                       {
+                                           img: "./rings/dexterity/t3_dex.png",
+                                           done: false
+                                       },
+                                       {
+                                           img: "./rings/dexterity/t4_dex.png",
+                                           done: false
+                                       },
+                                       {
+                                           img: "./rings/dexterity/t5_dex.png",
+                                           done: false
+                                       },
+                                       {
+                                           img: "./rings/dexterity/t6_dex.png",
+                                           done: false
+                                       }                               
+                                    ],
+                    
+                               },
+                           });
+                           </script>
+    </body>
+    </html>

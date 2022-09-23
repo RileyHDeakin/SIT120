@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+        <title>ROTMG - Collection tracker</title>
+        <!--linking a stylesheet for larger screen as well as one for smaller screens-->
+        <link rel="stylesheet" href="style.css">
+		<script src="javascript.js"></script>
+    </head>
+</html>
+<body>
+    
+    <nav class="navigationWrap">
+      <!--setting a logo for the website, responsive class will cause logo
+          to not be bigger than the navigation bar -->  
+        <logo class="logo_responsive">
+            <img class="responsive" src="./logo-test1.jpg" />
+        </logo>
+        <!--start of the links. The navigation class uses flex to display the items in a row-->
+    <ul class="navigation">
+        <li class="parent"><a class="link" href="./index.html">Home</a></li>
+        <!--new div for the dropdown link-->
+        <div class="dropdown">
+           <li class="parent"><a class="link" href="#">Collections</a></li> 
+            <div class="dropdown-content">
+                <a class="link" href="./weapons.html">Weapons</a>
+                <a class="link" href="./armor.html">Armor</a>
+                <a class="link" href="./rings.html">Rings</a>
+                <a class="link" href="./abilities.html">Abilities</a>
+            </div>
+        </div>
+        <li class="parent"><a class="link" href="./contact.html">Contact</a></li>
+        <li class="parent"><a class="link" href="#">About</a></li>
+        <li class="parent"><a class="link" href="./login.html">Login</a></li>
+    </ul>
+    </nav>
+    <br>   
+    <p class="center">Realm of the Mad god is a massively multiplayer online shooter
+        video games currently owned by DECA Games.</p>
+     <p class="center">Realm of the Mad God originally ran on Adobe Flash until July 22, 2020 where DECA Games
+        moved the game to Unity meaning the game can use graphics cards game visuals processing
+    unlike Flash which used your computers CPU</p>
+    <p class="center">This website provides a checklist for the items that can
+        be collected and used within Realm of the Mad God, giving players a new challenge.</p>
+        <br><br>
+    <p class="center">The Trailer for Realm of the Mag God Exalt:</p>
+    <!--Embeded Youtube video-->
+    <div class="center_time">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/4-CAFrv9H5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br><br>
+    <p class="center_time">The main theme for Realm of the Mad God Exalt</p>
+      <!--Audio tag of rotmg theme song-->
+      <div class="center_time">
+        <audio controls>
+            <source src="rotmg-main-theme.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+          </audio> 
+      </div>
+</body>
+</html>
